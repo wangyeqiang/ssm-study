@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/maven-micro-shop/common-services/common-services.iml" filepath="$PROJECT_DIR$/maven-micro-shop/common-services/common-services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven-javaee-project-02/maven-javaee-project-02.iml" filepath="$PROJECT_DIR$/maven-javaee-project-02/maven-javaee-project-02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven-javaee-project-03/maven-javaee-project-03.iml" filepath="$PROJECT_DIR$/maven-javaee-project-03/maven-javaee-project-03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven-javase-project01/maven-javase-project-01.iml" filepath="$PROJECT_DIR$/maven-javase-project01/maven-javase-project-01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven-micro-shop/maven-micro-shop.iml" filepath="$PROJECT_DIR$/maven-micro-shop/maven-micro-shop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven-pom-project-06/maven-pom-project-06.iml" filepath="$PROJECT_DIR$/maven-pom-project-06/maven-pom-project-06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven-micro-shop/order-services/order-services.iml" filepath="$PROJECT_DIR$/maven-micro-shop/order-services/order-services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven-pom-project-06/shop-chat/shop-chat.iml" filepath="$PROJECT_DIR$/maven-pom-project-06/shop-chat/shop-chat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven-pom-project-06/shop-order/shop-order.iml" filepath="$PROJECT_DIR$/maven-pom-project-06/shop-order/shop-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven-pom-project-06/shop-user/shop-user.iml" filepath="$PROJECT_DIR$/maven-pom-project-06/shop-user/shop-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm-maven-parent.iml" filepath="$PROJECT_DIR$/ssm-maven-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven-micro-shop/user-services/user-services.iml" filepath="$PROJECT_DIR$/maven-micro-shop/user-services/user-services.iml" />
+    </modules>
+  </component>
+</project>

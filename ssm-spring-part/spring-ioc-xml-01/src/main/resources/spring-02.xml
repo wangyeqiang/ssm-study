@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    引用和被引用的组件 都必须在IOC容器中-->
+
+<!--    1.0 单个构造参数注入 -->
+<!--    步骤1. 将他们都存放在IOC容器中 -->
+    <bean id="userDao" class="org.example.ioc_02.UserDao"/>
+    <bean id="userService" class="org.example.ioc_02.UserService" >
+        <!--    构造参数传值  DI的配置-->
+<!--   constructor-arg 构造参数传值的DI配置,下面二选一
+       value => 直接属性值  String  name = "二狗子 "
+       ref => 引用其他的 bean id
+     -->
+        <constructor-arg  ref="userDao" />
+    </bean>
+
+<!--    2.0 多个构造参数注入-->
+    <bean id="userService1" class="org.example.ioc_02.UserService" >
+    <!--    方案一 按顺序赋值-->
+        <constructor-arg value="18"/>
+        <constructor-arg value="二狗子"/>
+        <constructor-arg ref="userDao" />
+    </bean>
+
+    <bean id="userService2" class="org.example.ioc_02.UserService" >
+        <!--    方案二 按name赋值-->
+        <constructor-arg name="age" value="18"/>
+        <constructor-arg name="name" value="二狗子"/>
+        <constructor-arg name="userDao" ref="userDao" />
+    </bean>
+
+<!-- 3.0 触发setter方法进行注入-->
+    <bean id="movieFinder" class="org.example.ioc_02.MovieFinder" />
+    <bean id="simpleMovieLister"  class="org.example.ioc_02.SimpleMovieLister">
+<!--        name 属性setter方法的 去掉set和首字母小写的值，调用set方法的名
+            setMovieFinder => movieFinder
+            value | ref 二选一 value="直接属性赋值" ref="其他Bean的id"
+-->
+        <property name="movieName"  value="消失的他" />
+        <property name="movieFinder" ref="movieFinder" />
+    </bean>
+
+</beans>

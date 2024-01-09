@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="maven-javaee-project-03" />
+        <module name="shop-order" />
+        <module name="common-services" />
+        <module name="shop-user" />
+        <module name="maven-javaee-project-02" />
+        <module name="user-services" />
+        <module name="maven-javase-project-01" />
+        <module name="shop-chat" />
+        <module name="order-services" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="common-services" target="17" />
+      <module name="maven-javaee-project-02" target="17" />
+      <module name="maven-javaee-project-03" target="17" />
+      <module name="maven-javase-project-01" target="1.5" />
+      <module name="maven-micro-shop" target="17" />
+      <module name="maven-pom-project-06" target="17" />
+      <module name="order-services" target="17" />
+      <module name="shop-chat" target="17" />
+      <module name="shop-order" target="17" />
+      <module name="shop-user" target="17" />
+      <module name="user-services" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

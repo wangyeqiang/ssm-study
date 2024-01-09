@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    无参构造函数 id  class-->
+    <bean id="happyComponent" class="org.example.ioc_01.HappyComponent" />
+    <bean id="happyComponent2" class="org.example.ioc_01.HappyComponent" />
+
+<!--    静态工厂
+        id 组件标识
+        class 工厂类的全限定符
+        factory-method 静态工厂方法，必须含有static
+-->
+    <bean id="clientService" class="org.example.ioc_01.ClientService" factory-method="createInstance" />
+
+
+
+<!--    非静态工厂进行ioc配置-->
+<!--    1. 配置工厂类的组件信息-->
+    <bean id="defaultServiceLocator" class="org.example.ioc_01.DefaultServiceLocator"/>
+<!--    通过非静态工厂的对象和方法名 来配置生成ioc信息 -->
+    <bean id="clientService2" factory-bean="defaultServiceLocator" factory-method="createClientServiceInstance"/>
+</beans>

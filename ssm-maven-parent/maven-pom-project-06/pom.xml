@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.jyzq</groupId>
+    <artifactId>maven-pom-project-06</artifactId>
+    <version>1.0-SNAPSHOT</version>
+<!--    聚合模块，统一管理哪些自工程的module-->
+    <modules>
+        <module>shop-user</module>
+        <module>shop-order</module>
+        <module>shop-chat</module>
+    </modules>
+    <!--    父工程不打包-->
+    <packaging>pom</packaging>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+<!--    声明版本信息   -->
+<!--   导入以来，此处导入，所有子工程都有相应以来-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.33</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+<!--    -->
+</project>
