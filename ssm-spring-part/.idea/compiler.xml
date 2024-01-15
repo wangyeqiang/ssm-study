@@ -13,6 +13,7 @@
         <module name="spring-test-annotation-08" />
         <module name="spring0aop-annotation-10" />
         <module name="spring-ioc-annoation-practice-07" />
+        <module name="spring-all-wyq-test" />
       </profile>
     </annotationProcessing>
   </component>

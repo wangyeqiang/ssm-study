@@ -15,6 +15,7 @@
         <module>spring-test-annotation-08</module>
         <module>spring-aop-annotaion-09</module>
         <module>spring0aop-annotation-10</module>
+        <module>spring-all-wyq-test</module>
     </modules>
     <packaging>pom</packaging>
 
