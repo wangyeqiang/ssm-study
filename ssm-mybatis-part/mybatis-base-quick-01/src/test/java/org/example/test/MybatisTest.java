@@ -28,7 +28,11 @@ public class MybatisTest {
         // 3. 根据sqlSessionFactoyr创建sqlSession(每次业务创建一个，用完就释放)
         SqlSession sqlSession = sqlSessionFactory.openSession();
         // 4. 获取接口的代理对象(代理技术)，调用代理对象的方法，就会查找Mapper接口的方法
+        // jdk动态代理技术生成的mapper代理对象
+        // 1. 拼接 类的全限定符,方法名 整合参数->> ibatis对应的方法传入参数
+        // mybatis底层依然调用ibatis 只不过有固定的模式
         EmployeeMapper mapper = sqlSession.getMapper(EmployeeMapper.class);
+        // 内部拼接接口的全限定符号、方法名， 去查找sql语句标签
         Employee employee = mapper.queryById(1);
         System.out.println("employee = " + employee);
         // 5. 提交事务(非DDL) 和 释放资源
