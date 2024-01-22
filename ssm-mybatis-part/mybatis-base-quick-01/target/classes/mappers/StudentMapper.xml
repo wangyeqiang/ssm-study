@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- ibatis方式进行操作
+1。 不需要写接口
+2。 直接创建Mapper.xml文件，编写sql
+3. namespace没有任何要求，随便声明一个字符串即可
+4. 通过crud标签声明sql语句 即可
+-->
+<mapper namespace="xx.jj">
+    <!--存放student表对应的sql语句即可-->
+    <select id="kk" resultType="org.example.pojo.Student">
+        select * from student where sid = #{id}
+    </select>
+
+</mapper>
+
+
