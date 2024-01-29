@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.mapper.TeacherMapper">
+<!--    DML-->
+
+<!--    期望 非自增长的组件mybatics可以自己赋值-->
+    <insert id="insertTeacher">
+<!--        插入之前 先执行一段 生成主键值
+        order= before|after 代表sql 语句在之前还之后执行
+        reulstType返回值类型
+        keyproperty查询结果 给哪个属性赋值
+
+         // 自己维护主键 和这段类似
+        String id = UUID.randomUUID().toString().replace("-", "");
+        teacher.settId(id);
+-->
+
+
+        <selectKey order="BEFORE" resultType="string" keyProperty="tId">
+            select replace(uuid(),"-","");
+        </selectKey>
+        insert into teacher
+        VALUE(#{tId},#{tName})
+    </insert>
+    
+
+<!--        Teacher queryById(String tId);
+        列名和属性名不一致如何解决：
+        方案1： 别名  select t_id tId,t_name tName from teacher where t_id = #{tId}
+        方案2： 开启驼峰式映射
+                t_id   ->  tId 自动映射
+        方案3： ResultMap自定义映射（resultMap 和 resultType）二选一
+                reaultType 按照规则自定映射 ， 按照是否开启驼峰式映射，自己对应属性和列名 ！ 只能映射一层结构
+                深层次对应结果 多表查询的时候 结果无法映射
+                Order         数据库
+                orderId       order_id
+                orderName     order_name
+                OrderItem orderItem
+                            item_id    item_id
+
+
+                resultMap标签，自定义映射关系，可以深层次也可以单层次
+-->
+<!--    声明resultMap标签，用自己的映射规则
+        id表示 -> select resultMap="标识"
+        type  -> 具体返回值类型 全限定符和别名 | 集合只写泛型即可
+          <id 主键映射关系
+          <result
+-->
+    <resultMap id="tMap" type="teahcer">
+        <id column="t_id" property="tId"/>
+        <result column="t_name" property="tName"/>
+
+
+    </resultMap>
+    <select id="queryById" resultType="teacher">
+        select * from teacher where t_id = #{tId}
+
+    </select>
+
+</mapper>

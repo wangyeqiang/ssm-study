@@ -2,6 +2,7 @@ package org.example.mapper;
 
 import org.example.pojo.Employee;
 
+import java.util.List;
 import java.util.Map;
 
 public interface EmployeeMapper {
@@ -27,4 +28,17 @@ public interface EmployeeMapper {
      * @return
      */
     Map<String,Object> selectEmpNameAndMaxSalary();
+
+
+    // 查询工资高于传入值的员工姓名们
+    List<String> queryNamesBySalary(Double salary);
+
+
+    // 查询全部员工信息
+    List<Employee> queryAll();
+
+    // 员工插入
+    int insertEmp(Employee employee);
+
+
 }

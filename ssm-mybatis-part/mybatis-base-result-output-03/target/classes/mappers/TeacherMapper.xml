@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.mapper.TeacherMapper">
+<!--    DML-->
+
+<!--    期望 非自增长的组件mybatics可以自己赋值-->
+    <insert id="insertTeacher">
+<!--        插入之前 先执行一段 生成主键值
+        order= before|after 代表sql 语句在之前还之后执行
+        reulstType返回值类型
+        keyproperty查询结果 给哪个属性赋值
+
+         // 自己维护主键 和这段类似
+        String id = UUID.randomUUID().toString().replace("-", "");
+        teacher.settId(id);
+-->
+
+
+        <selectKey order="BEFORE" resultType="string" keyProperty="tId">
+            select replace(uuid(),"-","");
+        </selectKey>
+        insert into teacher
+        VALUE(#{tId},#{tName})
+    </insert>
+
+</mapper>
