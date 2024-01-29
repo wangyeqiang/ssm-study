@@ -26,4 +26,16 @@ public class StudentDaoImpl implements StudentDao {
         List<Student> studentList = jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Student.class));
         return studentList;
     }
+
+    @Override
+    public void updateNameById(String name,Integer id){
+        String sql = "update students set name = ? where id = ? ;";
+        int rows = jdbcTemplate.update(sql, name, id);
+    }
+
+    @Override
+    public void updateAgeById(Integer age,Integer id){
+        String sql = "update students set age = ? where id = ? ;";
+        jdbcTemplate.update(sql,age,id);
+    }
 }
