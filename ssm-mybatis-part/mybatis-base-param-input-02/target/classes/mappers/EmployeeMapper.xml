@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.example.mapper.EmployeeMapper">
+<!--
+          #{key} : 占位符 + 赋值  emp_id = ?  ? = 赋值
+          ${key}: 字符串拼接  " emp_id = "  + id
+
+          推荐使用#{key}  防止注入攻击的问题！！！
+          ？ 只能替代值的位置 ，不能替代的容器名 (标签、列名、sql关键字) emp_id = ？  不能写 ? = ？
+          xxxx(colunmName,columnValue)
+
+          sql  select * from where 列名是动态的 ${column} = 动态的值 #{columnValue}
+-->
+    <select id="queryById" resultType="org.example.pojo.Employee">
+        select emp_id empId, emp_name empName, emp_salary empSalary
+        from t_emp where emp_id = #{id}
+    </select>
+</mapper>

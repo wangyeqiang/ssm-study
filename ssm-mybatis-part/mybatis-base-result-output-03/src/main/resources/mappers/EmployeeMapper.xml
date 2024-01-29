@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.mapper.EmployeeMapper">
+<!--    DML-->
+
+    <delete id="deleteById" >
+        delete from t_emp where emp_id = #{id}
+    </delete>
+
+
+<!--    1. 场景1： 返回单个简单类型如何指定 resultType的写法 返回值的数据类型
+            resultTYpe语法：
+                    类的全限定符
+                    别名简称
+
+                        mybatis给我们提供72中默认的别名
+                        这些都是常用的Java数据类型
+                              基本数据类型 int  double -> _int _double
+                              包装数据类型  Integer Double -> int integer double
+                              集合容器类型 Map List -> 小写接口 map list hashmap
+                        如果没有提供需要自己定义 或者 类的全限定符号
+
+              扩展：如果没有提供的需要自己定义的数据类型
+              给自己的类如何定义别名:
+     <typeAliases>
+     mybatis-config.xml
+        1. 各类单独定义别名
+        <typeAlias type="org.example.mapper.EmployeeMapper" alias="ergouzi"/>
+        2. 批量将包下的类给与别名，别名就是类的首字母小写
+        <package name="org.example.pojo"/>
+    </typeAliases>
+    3. 如果不像使用批量的别名，可以使用注解给与名字；
+    @Alias("ergouzi")
+
+-->
+<!--    <select id="queryById" resultType="ergouzi">-->
+<!--        &lt;!&ndash; #{empId}代表动态传入的参数,并且进行赋值!后面详细讲解 &ndash;&gt;-->
+<!--        select emp_id empId,emp_name empName, emp_salary empSalary from-->
+<!--        t_emp where emp_id = #{id}-->
+<!--    </select>-->
+
+    <select id="queryNameById" resultType="Java.lang.String">
+        select emp_name from t_emp where emp_id = #{id}
+    </select>
+
+    <select id="querySalaryById" resultType="Java.lang.Double">
+        select emp_salary from t_emp where emp_id = #{id}
+    </select>
+
+<!--    场景2： 返回单个自定义类类型
+        reustType指定返回值类型即可
+        默认要求：
+           查询：返回单个是类型 要求别名和属性名一直，这样才可以进行实体类的属性映射。
+        但是可以进行设置：设置支持驼峰式自动映射
+        emp_id ====> empId
+-->
+
+    <!--        自动开启驼峰式自动映射 数据库 a_column  java AColumn
+      emp_id -> empId === empId
+      mybatis-config.xml中
+    <setting name="mapUnderscoreToCamelCase" value="true"/>
+
+     -->
+    <select id="queryById" resultType="org.example.pojo.Employee">
+            select * from
+    t_emp where emp_id = #{id}
+    </select>
+
+    <select id="selectEmpNameAndMaxSalary" resultType="map">
+        SELECT
+        emp_name 员工姓名,
+        emp_salary 员工工资,
+        (SELECT AVG(emp_salary) FROM t_emp) 部门平均工资
+        FROM t_emp WHERE emp_salary=(
+        SELECT MAX(emp_salary) FROM t_emp
+        )
+    </select>
+    
+</mapper>
