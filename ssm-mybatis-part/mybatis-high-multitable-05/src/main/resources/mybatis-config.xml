@@ -10,6 +10,8 @@
         <setting name="logImpl" value="STDOUT_LOGGING"/>
 <!--        自动开启驼峰式自动映射 数据库 a_column  java AColumn -->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
+<!--        resultMap 标签  有没有嵌套都会自动帮我们映射result标签的属性-->
+        <setting name="autoMappingBehavior" value="FULL"/>
     </settings>
 
     <!--        定义自己类的别名-->
