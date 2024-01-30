@@ -6,7 +6,7 @@
 
 
     <settings>
-        <!--        开启 mybatis的日志输出，选择使用system进行控制台输出-->
+        <!--  开启 mybatis的日志输出，选择使用system进行控制台输出-->
         <setting name="logImpl" value="STDOUT_LOGGING"/>
 <!--        自动开启驼峰式自动映射 数据库 a_column  java AColumn -->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
@@ -48,8 +48,7 @@
         <!-- mapper标签：配置一个具体的Mapper映射文件 -->
         <!-- resource属性：指定Mapper映射文件的实际存储位置，这里需要使用一个以类路径根目录为基准的相对路径 -->
         <!--    对Maven工程的目录结构来说，resources目录下的内容会直接放入类路径，所以这里我们可以以resources目录为基准 -->
-        <mapper resource="mappers/EmployeeMapper.xml"/>
-        <mapper resource="mappers/TeacherMapper.xml"/>
+        <mapper resource="mappers/UserMapper.xml"/>
     </mappers>
 
 </configuration>

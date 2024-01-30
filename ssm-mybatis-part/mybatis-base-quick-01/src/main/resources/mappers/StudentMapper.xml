@@ -12,7 +12,7 @@
 -->
 <mapper namespace="xx.jj">
     <!--存放student表对应的sql语句即可-->
-    <select id="kk" resultType="org.org.example.pojo.Student">
+    <select id="kk" resultType="org.org.example.org.example.pojo.Student">
         select * from student where sid = #{id}
     </select>
 

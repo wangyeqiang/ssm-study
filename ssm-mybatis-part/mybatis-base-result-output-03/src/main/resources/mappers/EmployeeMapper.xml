@@ -30,7 +30,7 @@
         1. 各类单独定义别名
         <typeAlias type="org.example.mapper.EmployeeMapper" alias="ergouzi"/>
         2. 批量将包下的类给与别名，别名就是类的首字母小写
-        <package name="org.example.pojo"/>
+        <package name="org.example.org.example.pojo"/>
     </typeAliases>
     3. 如果不像使用批量的别名，可以使用注解给与名字；
     @Alias("ergouzi")
@@ -65,7 +65,7 @@
     <setting name="mapUnderscoreToCamelCase" value="true"/>
 
      -->
-    <select id="queryById" resultType="org.example.pojo.Employee">
+    <select id="queryById" resultType="org.example.org.example.pojo.Employee">
             select * from
     t_emp where emp_id = #{id}
     </select>

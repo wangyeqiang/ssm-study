@@ -15,7 +15,7 @@
 
           sql  select * from where 列名是动态的 ${column} = 动态的值 #{columnValue}
 -->
-    <select id="queryById" resultType="org.org.example.pojo.Employee">
+    <select id="queryById" resultType="org.org.example.org.example.pojo.Employee">
         select emp_id empId, emp_name empName, emp_salary empSalary
         from t_emp where emp_id = #{id}
     </select>
@@ -26,7 +26,7 @@
         delete from t_emp where emp_id = #{ergouzi}
     </delete>
 
-    <select id="queryBySalary" resultType="org.org.example.pojo.Employee">
+    <select id="queryBySalary" resultType="org.org.example.org.example.pojo.Employee">
         select emp_id empId, emp_name empName, emp_salary empSalary
         from t_emp where emp_salary = #{salary}
     </select>
@@ -47,7 +47,7 @@
             param1 param2 ....
              (name,salary) name -> key = param1 salary -> key = param2
 -->
-    <select id="queryByNameAndSalary" resultType="org.org.example.pojo.Employee">
+    <select id="queryByNameAndSalary" resultType="org.org.example.org.example.pojo.Employee">
         select emp_id empId, emp_name empName, emp_salary empSalary
         from t_emp where emp_name = #{a}  and emp_salary = #{b}
     </select>
