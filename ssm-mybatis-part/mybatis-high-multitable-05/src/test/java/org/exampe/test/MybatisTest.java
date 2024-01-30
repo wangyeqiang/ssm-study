@@ -26,15 +26,15 @@ public class MybatisTest {
         session = new SqlSessionFactoryBuilder()
                 .build(
                         Resources.getResourceAsStream("mybatis-config.xml"))
-                .openSession();
+                .openSession(true);
     }
 
 
     @Test
     public void testToOne(){
-        // 查询订单和影虎
+        // 查询订单和用户
         OrderMapper mapper = session.getMapper(OrderMapper.class);
-        Order order = mapper.queryOrderById(2);
+        Order order = mapper.queryOrderById(1);
         System.out.println(order);
         System.out.println(order.getCustomer());
     }

@@ -17,7 +17,7 @@
 <!--        单独定义-->
 <!--        <typeAlias type="org.example.mapper.EmployeeMapper" alias="ergouzi"/>-->
 <!-- 批量将包下的类给与别名，别名就是类的首字母小写-->
-        <package name="org.example.org.example.pojo"/>
+        <package name="org.example.pojo"/>
     </typeAliases>
 
     <!-- environments表示配置Mybatis的开发环境，可以配置多个环境，在众多具体环境中，使用default属性指定实际运行时使用的环境。default属性的取值是environment标签的id属性的值。 -->
@@ -33,12 +33,12 @@
              -->
             <dataSource type="POOLED">
                 <!-- 建立数据库连接的具体信息 -->
-<!--                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>-->
-                <property name="url" value="jdbc:mysql://10.32.71.163:3306/mybatis-example"/>
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+<!--                <property name="url" value="jdbc:mysql://10.32.71.163:3306/mybatis-example"/>-->
                 <property name="url" value="jdbc:mysql://localhost:3306/mybatis-example"/>
                 <property name="username" value="root"/>
-<!--             <property name="password" value="ruyiruyi"/>-->
-                <property name="password" value="Sjzxz@cxdbdb82077274"/>
+             <property name="password" value="ruyiruyi"/>
+<!--                <property name="password" value="Sjzxz@cxdbdb82077274"/>-->
             </dataSource>
         </environment>
     </environments>
