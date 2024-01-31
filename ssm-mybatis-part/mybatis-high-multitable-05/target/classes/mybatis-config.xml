@@ -35,7 +35,7 @@
              -->
             <dataSource type="POOLED">
                 <!-- 建立数据库连接的具体信息 -->
-<!--                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>-->
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
                 <property name="url" value="jdbc:mysql://10.32.71.163:3306/mybatis-example"/>
 <!--                <property name="url" value="jdbc:mysql://localhost:3306/mybatis-example"/>-->
                 <property name="username" value="root"/>
