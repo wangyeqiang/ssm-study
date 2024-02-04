@@ -3,19 +3,16 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/springmvc-base-input-02" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc-base-other-05" />
     <file type="web" url="file://$PROJECT_DIR$/springmvc-base-output-03" />
     <file type="web" url="file://$PROJECT_DIR$/springmvc-base-quick-01" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc-base-restful-04" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/springmvc-base-output04/pom.xml" />
-      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="17" project-jdk-type="JavaSDK">

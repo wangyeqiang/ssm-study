@@ -12,6 +12,7 @@
         <module>springmvc-base-input-02</module>
         <module>springmvc-base-output-03</module>
         <module>springmvc-base-restful-04</module>
+        <module>springmvc-base-other-05</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -80,5 +81,19 @@
         <version>3.0.0</version>
     </dependency>
 
+
+    <!-- 校验注解实现-->
+    <!-- https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator -->
+    <dependency>
+        <groupId>org.hibernate.validator</groupId>
+        <artifactId>hibernate-validator</artifactId>
+        <version>8.0.0.Final</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator-annotation-processor -->
+    <dependency>
+        <groupId>org.hibernate.validator</groupId>
+        <artifactId>hibernate-validator-annotation-processor</artifactId>
+        <version>8.0.0.Final</version>
+    </dependency>
 </dependencies>
 </project>
