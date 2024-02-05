@@ -34,7 +34,7 @@ public class MapperJavaConfig {
         sqlSessionFactoryBean.setDataSource(dataSource);
         // 指定外部mybatis配置文件
         // Resource spring core下面的
-        Resource resource = new ClassPathResource("mybatis-config,xml");
+        Resource resource = new ClassPathResource("mybatis-config.xml");
         sqlSessionFactoryBean.setConfigLocation(resource);
 
         return sqlSessionFactoryBean;
@@ -46,7 +46,7 @@ public class MapperJavaConfig {
     public MapperScannerConfigurer mapperScannerConfigurer() {
         // Mapper代理对象的factoryBean  -> 指定一个包 -》 mapper接口 -》mapper代理对象->ioc
         MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
-        mapperScannerConfigurer.setBasePackage("org.exampler.mapper");  // mapper和mapperxml的所在共同包
+        mapperScannerConfigurer.setBasePackage("org.example.mapper");  // mapper和mapperxml的所在共同包
         return mapperScannerConfigurer;
 
     }

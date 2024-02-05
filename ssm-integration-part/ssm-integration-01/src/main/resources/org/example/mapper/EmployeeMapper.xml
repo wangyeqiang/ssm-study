@@ -6,7 +6,7 @@
 <mapper namespace="org.example.mapper.EmployeeMapper">
 
 
-    <select id="queryList" resultType="org.example.pojo.Employee">
+    <select id="queryList" resultType="employee">
         select * from t_emp
     </select>
 

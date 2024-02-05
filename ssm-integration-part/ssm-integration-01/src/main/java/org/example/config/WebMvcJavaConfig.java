@@ -17,7 +17,7 @@ import org.springframework.web.servlet.config.annotation.*;
 
 
 @Configuration
-//@ComponentScan({"org.example.contoller","org.example.exceptionhandler"})
+@ComponentScan("org.example.controller")   // 这里的扫描包还是要添加的
 @EnableWebMvc  // handlerMapping handlerAdatper json转化器
 public class WebMvcJavaConfig implements WebMvcConfigurer {
 

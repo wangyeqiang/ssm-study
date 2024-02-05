@@ -21,6 +21,7 @@ public class EmployeeController {
 
     @GetMapping("find")
     public List<Employee> find(){
+        System.out.println("fuck" );
         List<Employee> all = employeeService.findALl();
         return all;
     }

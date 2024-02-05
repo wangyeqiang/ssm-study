@@ -6,6 +6,7 @@ import com.github.pagehelper.PageInterceptor;
 import org.apache.ibatis.logging.slf4j.Slf4jImpl;
 import org.apache.ibatis.session.AutoMappingBehavior;
 import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.annotation.MapperScan;
 import org.mybatis.spring.mapper.MapperScannerConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,6 +23,7 @@ import java.util.Properties;
  * 解决办法：分开配置
  */
 @Configuration
+@MapperScan("org.example.mapper")  // 这里添加了就不用最后的那个Bean了
 public class MapperJavaConfigNew {
 
 
@@ -88,12 +90,12 @@ public class MapperJavaConfigNew {
 
 
     // mapper代理对象加入到ioc容器
-    @Bean
-    public MapperScannerConfigurer mapperScannerConfigurer() {
-        // Mapper代理对象的factoryBean  -> 指定一个包 -》 mapper接口 -》mapper代理对象->ioc
-        MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
-        mapperScannerConfigurer.setBasePackage("org.exampler.mapper");  // mapper和mapperxml的所在共同包
-        return mapperScannerConfigurer;
-
-    }
+//    @Bean
+//    public MapperScannerConfigurer mapperScannerConfigurer() {
+//        // Mapper代理对象的factoryBean  -> 指定一个包 -》 mapper接口 -》mapper代理对象->ioc
+//        MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
+//        mapperScannerConfigurer.setBasePackage("org.example.mapper");  // mapper和mapperxml的所在共同包
+//        return mapperScannerConfigurer;
+//
+//    }
 }
