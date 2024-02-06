@@ -1,0 +1,17 @@
+
+
+# yaml有层次，可以继承的配置文件格式
+# 有缩进
+server:
+  port: 80
+  servlet:
+    context-path: /boot
+
+zwf:
+  user:
+    username: root
+    password: 123456
+    gfs:
+      - 高圆圆
+      - 范冰冰
+      - 二狗子

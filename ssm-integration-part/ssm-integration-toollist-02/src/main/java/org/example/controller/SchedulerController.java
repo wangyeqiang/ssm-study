@@ -10,8 +10,9 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin  // 允许其他源访问我们的controller 浏览器大哥就不拦截了
 @RestController
-@RequestMapping("scheduler")
+@RequestMapping("schedule")
 @Slf4j
 public class SchedulerController {
 
