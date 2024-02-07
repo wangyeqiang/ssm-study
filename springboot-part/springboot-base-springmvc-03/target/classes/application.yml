@@ -1,0 +1,9 @@
+
+
+#　springmv相关的web配置
+
+server:
+  port: 8080  # 端口号 默认是8080
+  servlet:
+    context-path: /boot
+

@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/springboot-base-application-02/springboot-base-application-02.iml" filepath="$PROJECT_DIR$/springboot-base-application-02/springboot-base-application-02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-base-druid-04/springboot-base-druid-04.iml" filepath="$PROJECT_DIR$/springboot-base-druid-04/springboot-base-druid-04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-base-mybatis-05/springboot-base-mybatis-05.iml" filepath="$PROJECT_DIR$/springboot-base-mybatis-05/springboot-base-mybatis-05.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-base-quick-01/springboot-base-quick-01.iml" filepath="$PROJECT_DIR$/springboot-base-quick-01/springboot-base-quick-01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-base-springmvc-03/springboot-base-springmvc-03.iml" filepath="$PROJECT_DIR$/springboot-base-springmvc-03/springboot-base-springmvc-03.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/springboot-part.iml" filepath="$PROJECT_DIR$/.idea/springboot-part.iml" />
     </modules>
   </component>

@@ -1,0 +1,16 @@
+
+
+#　springmv相关的web配置
+
+server:
+  port: 8080  # 端口号 默认是8080
+  servlet:
+    context-path: /boot
+
+spring:
+  web:
+    resources:
+      static-locations: classpath:webapp  # 配置静态资源文件夹
+      # 一旦配置了 默认的静态资源文件夹就无法访问了 static public resoueces /META_INF/resources
+      # 外部访问静态资源的时候，不需要写静态资源文件夹
+

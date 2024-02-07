@@ -7,11 +7,14 @@ server:
   servlet:
     context-path: /boot
 
+
 zwf:
   user:
-    username: root
-    password: 123456
+    username: userapplication
     gfs:
       - 高圆圆
       - 范冰冰
       - 二狗子
+spring:
+  profiles:
+    active: dev,test
