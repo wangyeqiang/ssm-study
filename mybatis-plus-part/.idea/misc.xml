@@ -4,10 +4,15 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/mybatis-plus-base-quick-01/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-plus-crud-mapper-02/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-plus-curd-service-03/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-plus-curd-service-04/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-plus-curd-other-04/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-plus-mybatis-06/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager">
+  <component name="ProjectRootManager" version="2" project-jdk-name="17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

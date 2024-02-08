@@ -1,0 +1,27 @@
+
+
+
+
+# druid连接池
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      url: jdbc:mysql://10.32.71.163:3306/mybatis-example
+      username: root
+      password: Sjzxz@cxdbdb82077274
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+mybatis-plus:
+  # 默认mapperxml文件的位置九尾鱼 classpath:/mapper
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-aliases-package: org.example.pojo
+  global-config:
+    db-config:
+#      table-prefix: t_ # 表名前缀，不用再每个实体类配置@TableName
+      id-type: auto
+#      logic-delete-value: 1 # 删除1
+#      logic-not-delete-value: 0 # 未删除 0
+#      logic-delete-field: deleted # 逻辑删除的属性名 注意：属性名

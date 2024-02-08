@@ -1,0 +1,18 @@
+
+
+
+
+# druid连接池
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      url: jdbc:mysql://10.32.71.163:3306/mybatis-example
+      username: root
+      password: Sjzxz@cxdbdb82077274
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
